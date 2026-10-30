@@ -4,7 +4,7 @@ Aplicación web integral para acortar enlaces construida con servicios cloud de 
 
 ---
 
-## 🏗️ Arquitectura de la Solución
+## Arquitectura de la Solución
 
 ```
                     ┌───────────────────────────────┐
@@ -36,7 +36,7 @@ Aplicación web integral para acortar enlaces construida con servicios cloud de 
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```text
 aws-url-shortener/
@@ -64,7 +64,7 @@ aws-url-shortener/
 
 ---
 
-## 🚀 Guía de Despliegue Paso a Paso
+## Guía de Despliegue Paso a Paso
 
 ### Paso 1: Crear la tabla en Amazon DynamoDB
 1. Ve a la consola de **DynamoDB** en la región de tu preferencia (ej. `us-east-1`).
