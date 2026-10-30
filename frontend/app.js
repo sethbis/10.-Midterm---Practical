@@ -2,7 +2,7 @@
  * AWS URL Shortener - Frontend Client
  * Configura la URL base de tu backend desplegado en EC2 aquí:
  */
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "http://3.91.243.55:8000";
 
 // Elementos del DOM
 const shortenForm = document.getElementById("shorten-form");
