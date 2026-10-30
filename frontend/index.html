@@ -40,13 +40,17 @@
 
       <!-- Contenedor de Error -->
       <div id="error-box" class="alert-box error" hidden role="alert">
-        <div class="alert-icon">⚠️</div>
+        <svg class="alert-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
         <div class="alert-message" id="error-message"></div>
       </div>
 
       <!-- Contenedor de Resultado -->
       <div id="result-box" class="result-box" hidden>
-        <h3>¡Tu enlace corto está listo!</h3>
+        <h3>Enlace corto generado</h3>
         <div class="result-display">
           <input type="text" id="short-url-output" readonly>
           <button type="button" id="copy-btn" class="secondary-btn" title="Copiar enlace">
@@ -55,7 +59,7 @@
         </div>
         <div class="meta-details">
           <p><strong>UUID:</strong> <span id="short-code-label"></span></p>
-          <p><a id="test-link" href="#" target="_blank" rel="noopener noreferrer">Abrir enlace corto ↗</a></p>
+          <p><a id="test-link" href="#" target="_blank" rel="noopener noreferrer">Abrir enlace corto</a></p>
         </div>
       </div>
     </section>

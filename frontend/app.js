@@ -131,7 +131,7 @@ copyBtn.addEventListener("click", async () => {
   try {
     await navigator.clipboard.writeText(shortUrlOutput.value);
     copyBtn.classList.add("copied");
-    copyBtnText.textContent = "¡Copiado!";
+    copyBtnText.textContent = "Copiado";
 
     setTimeout(() => {
       copyBtn.classList.remove("copied");
@@ -141,7 +141,7 @@ copyBtn.addEventListener("click", async () => {
     // Fallback tradicional si falla la API Clipboard
     shortUrlOutput.select();
     document.execCommand("copy");
-    copyBtnText.textContent = "¡Copiado!";
+    copyBtnText.textContent = "Copiado";
     setTimeout(() => {
       copyBtnText.textContent = "Copiar";
     }, 2500);

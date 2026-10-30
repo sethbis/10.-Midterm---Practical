@@ -185,16 +185,26 @@ body {
   }
 }
 
+[hidden],
+.alert-box[hidden] {
+  display: none !important;
+}
+
 /* Alert Boxes */
 .alert-box {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
   padding: 14px 16px;
   border-radius: 8px;
   font-size: 0.9rem;
   line-height: 1.4;
   animation: fadeIn 0.25s ease-in-out;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  stroke: currentColor;
 }
 
 .alert-box.error {
