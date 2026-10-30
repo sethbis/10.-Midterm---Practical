@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud URL Shortener | AWS S3 + EC2 + DynamoDB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-decor"></div>
+  
+  <main class="container">
+    <header class="app-header">
+      <div class="badge">AWS Cloud Architecture</div>
+      <h1>Acortador de Enlaces</h1>
+      <p class="subtitle">Desplegado en Amazon S3, procesado en EC2 y persistido en DynamoDB</p>
+    </header>
+
+    <section class="card">
+      <form id="shorten-form" novalidate>
+        <div class="input-group">
+          <label for="url-input">Ingresa la URL original</label>
+          <div class="input-wrapper">
+            <input 
+              type="url" 
+              id="url-input" 
+              name="original_url" 
+              placeholder="https://ejemplo.com/mi-ruta-larga-y-compleja" 
+              required
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="primary-btn">
+          <span class="btn-text">Acortar URL</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+      </form>
+
+      <!-- Contenedor de Error -->
+      <div id="error-box" class="alert-box error" hidden role="alert">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-message" id="error-message"></div>
+      </div>
+
+      <!-- Contenedor de Resultado -->
+      <div id="result-box" class="result-box" hidden>
+        <h3>¡Tu enlace corto está listo!</h3>
+        <div class="result-display">
+          <input type="text" id="short-url-output" readonly>
+          <button type="button" id="copy-btn" class="secondary-btn" title="Copiar enlace">
+            <span id="copy-btn-text">Copiar</span>
+          </button>
+        </div>
+        <div class="meta-details">
+          <p><strong>UUID:</strong> <span id="short-code-label"></span></p>
+          <p><a id="test-link" href="#" target="_blank" rel="noopener noreferrer">Abrir enlace corto ↗</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="app-footer">
+      <div class="cloud-stack">
+        <span>S3 (Frontend)</span> • <span>EC2 + FastAPI (Backend)</span> • <span>DynamoDB (Storage)</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
